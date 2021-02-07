@@ -25,8 +25,6 @@ using Quaver.Shared.Screens;
 using Quaver.Shared.Screens.Edit;
 using Quaver.Shared.Screens.Editor;
 using Quaver.Shared.Screens.Importing;
-using Quaver.Shared.Screens.Multi;
-using Quaver.Shared.Screens.Multiplayer;
 using Quaver.Shared.Screens.Result;
 using Quaver.Shared.Screens.Results;
 using Quaver.Shared.Screens.Selection;
@@ -101,12 +99,6 @@ namespace Quaver.Shared.Database.Maps
 
                 if (screen.Type == QuaverScreenType.Select)
                 {
-                    if (OnlineManager.CurrentGame != null)
-                    {
-                        var select = game.CurrentScreen as SelectionScreen;
-                        screen.Exit(() => new ImportingScreen(null, true));
-                        return;
-                    }
 
                     screen.Exit(() => new ImportingScreen());
                     return;
@@ -114,15 +106,6 @@ namespace Quaver.Shared.Database.Maps
 
                 if (screen.Type == QuaverScreenType.Music)
                 {
-                    screen.Exit(() => new ImportingScreen());
-                    return;
-                }
-
-                if (screen.Type == QuaverScreenType.Multiplayer)
-                {
-                    var multi = (MultiplayerGameScreen)screen;
-                    multi.DontLeaveGameUponScreenSwitch = true;
-
                     screen.Exit(() => new ImportingScreen());
                     return;
                 }

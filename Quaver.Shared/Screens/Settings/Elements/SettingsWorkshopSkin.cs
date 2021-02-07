@@ -34,7 +34,7 @@ namespace Quaver.Shared.Screens.Settings.Elements
         {
             var skins = new List<string> { "None" };
 
-            var steamWorkshopSkins = Directory.GetDirectories(ConfigManager.SteamWorkshopDirectory.Value);
+            var steamWorkshopSkins = Directory.GetDirectories(ConfigManager.SkinDirectory.Value);
 
             foreach (var directory in steamWorkshopSkins)
             {

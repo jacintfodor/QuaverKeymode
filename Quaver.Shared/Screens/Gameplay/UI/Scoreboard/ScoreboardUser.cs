@@ -207,25 +207,7 @@ namespace Quaver.Shared.Screens.Gameplay.UI.Scoreboard
 
             if (Type != ScoreboardUserType.Self)
             {
-                if (LocalScore != null && (LocalScore.IsOnline || LocalScore.IsMultiplayer))
-                {
-                    // Check to see if we have a Steam avatar for this user cached.
-                    if (SteamManager.UserAvatars.ContainsKey((ulong)LocalScore.SteamId))
-                        Avatar.Image = SteamManager.UserAvatars[(ulong)LocalScore.SteamId];
-                    else
-                    {
-                        Avatar.Alpha = 0;
-                        Avatar.Image = UserInterface.UnknownAvatar;
-
-                        // Otherwise we need to request for it.
-                        SteamManager.SteamUserAvatarLoaded += OnAvatarLoaded;
-                        SteamManager.SendAvatarRetrievalRequest((ulong)LocalScore.SteamId);
-                    }
-                }
-                else
-                {
-                    Avatar.Image = UserInterface.UnknownAvatar;
-                }
+                Avatar.Image = UserInterface.UnknownAvatar;
             }
 
             // Create username text.
@@ -269,9 +251,6 @@ namespace Quaver.Shared.Screens.Gameplay.UI.Scoreboard
         /// </summary>
         public override void Destroy()
         {
-            // ReSharper disable once DelegateSubtraction
-            SteamManager.SteamUserAvatarLoaded -= OnAvatarLoaded;
-
             base.Destroy();
         }
 

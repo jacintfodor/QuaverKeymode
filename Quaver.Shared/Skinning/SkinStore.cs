@@ -46,7 +46,7 @@ namespace Quaver.Shared.Skinning
                 if (!ConfigManager.UseSteamWorkshopSkin.Value)
                     return $"{ConfigManager.SkinDirectory.Value}/{Skin}";
 
-                return $"{ConfigManager.SteamWorkshopDirectory.Value}/{Skin}";
+                return $"{ConfigManager.SkinDirectory.Value}/{Skin}";
             }
         }
 

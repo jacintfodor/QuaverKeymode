@@ -124,7 +124,7 @@ namespace Quaver.Shared.Skinning
                         Directory.CreateDirectory(dir);
 
                         var skinDir = ConfigManager.UseSteamWorkshopSkin.Value ?
-                            $"{ConfigManager.SteamWorkshopDirectory.Value}/{ConfigManager.Skin.Value}"
+                            $"{ConfigManager.SkinDirectory.Value}/{ConfigManager.Skin.Value}"
                                 : $"{ConfigManager.SkinDirectory.Value}/{ConfigManager.Skin.Value}";
 
                         if (!Directory.Exists(skinDir))

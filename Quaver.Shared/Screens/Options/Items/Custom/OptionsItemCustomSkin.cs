@@ -94,7 +94,7 @@ namespace Quaver.Shared.Screens.Options.Items.Custom
             var dirs = skinDirectories.Select(dir => new DirectoryInfo(dir).Name);
             skins.AddRange(dirs.ToList());
 
-            var workshopDirectories = Directory.GetDirectories(ConfigManager.SteamWorkshopDirectory.Value);
+            var workshopDirectories = Directory.GetDirectories(ConfigManager.SkinDirectory.Value);
 
             var workshopList = new List<string>();
 

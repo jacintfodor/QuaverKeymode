@@ -8,7 +8,6 @@ using Quaver.Shared.Config;
 using Quaver.Shared.Online;
 using Quaver.Shared.Skinning;
 using SQLite;
-using Steamworks;
 using Wobble;
 using Wobble.Assets;
 using Wobble.Bindables;
@@ -260,14 +259,6 @@ namespace Quaver.Shared.Graphics.Menu.Border.Components.Users
         private Texture2D GetAvatar()
         {
             var image = UserInterface.OfflineAvatar;
-
-            if (OnlineManager.Status.Value == ConnectionStatus.Connected && SteamManager.UserAvatars != null)
-            {
-                var id = SteamUser.GetSteamID().m_SteamID;
-
-                if (SteamManager.UserAvatars.ContainsKey(id))
-                    image = SteamManager.UserAvatars[id];
-            }
 
             return image;
         }

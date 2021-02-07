@@ -20,7 +20,6 @@ using Quaver.Shared.Modifiers;
 using Quaver.Shared.Modifiers.Mods;
 using Quaver.Shared.Online;
 using Quaver.Shared.Scheduling;
-using Quaver.Shared.Screens.Download;
 using Quaver.Shared.Screens.Edit;
 using Quaver.Shared.Screens.Editor;
 using Quaver.Shared.Screens.Gameplay;
@@ -28,8 +27,6 @@ using Quaver.Shared.Screens.Importing;
 using Quaver.Shared.Screens.Loading;
 using Quaver.Shared.Screens.Main;
 using Quaver.Shared.Screens.Menu;
-using Quaver.Shared.Screens.Multi;
-using Quaver.Shared.Screens.Multiplayer;
 using Quaver.Shared.Screens.Select.UI.Leaderboard;
 using Quaver.Shared.Screens.Selection.UI;
 using Quaver.Shared.Screens.Selection.UI.Dialogs;
@@ -108,7 +105,7 @@ namespace Quaver.Shared.Screens.Selection
             if (MapsetImporter.Queue.Count > 0 || QuaverSettingsDatabaseCache.OutdatedMaps.Count != 0
                                                || MapDatabaseCache.MapsToUpdate.Count != 0)
             {
-                Exit(() => new ImportingScreen(null, true));
+                Exit(() => new ImportingScreen());
                 return;
             }
 
@@ -616,12 +613,6 @@ namespace Quaver.Shared.Screens.Selection
         {
             Exit(() =>
             {
-                if (IsMultiplayer)
-                {
-                    OnlineManager.Client?.SetGameCurrentlySelectingMap(false);
-                    return new MultiplayerGameScreen();
-                }
-
                 return new MainMenuScreen();
             });
         }
@@ -674,33 +665,6 @@ namespace Quaver.Shared.Screens.Selection
         /// </summary>
         private void SelectMultiplayerMap()
         {
-            var map = MapManager.Selected.Value;
-
-            if (!CheckMultiplayerDifficultyRange())
-                return;
-
-            if (!CheckMultiplayerSongLength())
-                return;
-
-            if (!CheckMultiplayerGameMode())
-                return;
-
-            if (!CheckMultiplayerLongNotePercentage())
-                return;
-
-            // Start the fade out early to make it look like the screen is loading
-            Transitioner.FadeIn();
-
-            ThreadScheduler.Run(() =>
-            {
-                OnlineManager.Client.ChangeMultiplayerGameMap(map.Md5Checksum, map.MapId,
-                    map.MapSetId, map.ToString(), (byte)map.Mode, map.DifficultyFromMods(ModManager.Mods),
-                    map.GetDifficultyRatings(), map.GetJudgementCount(), MapManager.Selected.Value.GetAlternativeMd5());
-
-                OnlineManager.Client.SetGameCurrentlySelectingMap(false);
-
-                Exit(() => new MultiplayerGameScreen());
-            });
         }
 
         /// <summary>
@@ -917,7 +881,7 @@ namespace Quaver.Shared.Screens.Selection
         /// <param name="e"></param>
         /// <exception cref="NotImplementedException"></exception>
         private void OnAutoLoadOsuBeatmapsChanged(object sender, BindableValueChangedEventArgs<bool> e)
-            => Exit(() => new ImportingScreen(null, true));
+            => Exit(() => new ImportingScreen());
 
         /// <inheritdoc />
         /// <summary>

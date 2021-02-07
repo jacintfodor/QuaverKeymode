@@ -45,7 +45,7 @@ namespace Quaver.Shared.Screens.Options.Items.Custom
                 }
 
                 var dir = ConfigManager.UseSteamWorkshopSkin.Value ?
-                    $"{ConfigManager.SteamWorkshopDirectory.Value}/{ConfigManager.Skin.Value}"
+                    $"{ConfigManager.SkinDirectory.Value}/{ConfigManager.Skin.Value}"
                     : $"{ConfigManager.SkinDirectory.Value}/{ConfigManager.Skin.Value}";
 
                 if (!Directory.Exists(dir))

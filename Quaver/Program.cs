@@ -94,7 +94,6 @@ namespace Quaver
             Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
 
             NativeAssemblies.Copy();
-            SteamManager.Initialize();
 
             try
             {

@@ -1,4 +1,4 @@
-﻿using System.Threading;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using Quaver.Server.Common.Objects;
 using Quaver.Shared.Assets;
@@ -10,7 +10,6 @@ using Quaver.Shared.Scheduling;
 using Quaver.Shared.Screens.Beta;
 using Quaver.Shared.Screens.Main;
 using Quaver.Shared.Skinning;
-using Steamworks;
 using Wobble;
 using Wobble.Logging;
 using Wobble.Scheduling;
@@ -66,7 +65,6 @@ namespace Quaver.Shared.Screens.Initialization
             game.SetProcessPriority();
             game.PerformGameSetup();
 
-            SteamManager.SendAvatarRetrievalRequest(SteamUser.GetSteamID().m_SteamID);
             BackgroundHelper.Initialize();
 
             // Create the global FPS counter.
