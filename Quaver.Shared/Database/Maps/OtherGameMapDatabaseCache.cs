@@ -330,7 +330,15 @@ namespace Quaver.Shared.Database.Maps
                         Source = map.SongSource,
                         Tags = map.SongTags,
                         // ReSharper disable once CompareOfFloatsByEqualityOperator
-                        Mode = (API.Enums.GameMode)map.CircleSize,
+                        Mode = map.CircleSize == 1 ? Quaver.API.Enums.GameMode.Keys1 :
+                        map.CircleSize == 2 ? Quaver.API.Enums.GameMode.Keys2 :
+                        map.CircleSize == 3 ? Quaver.API.Enums.GameMode.Keys3 :
+                        map.CircleSize == 4 ? Quaver.API.Enums.GameMode.Keys4 :
+                        map.CircleSize == 5 ? Quaver.API.Enums.GameMode.Keys5 :
+                        map.CircleSize == 6 ? Quaver.API.Enums.GameMode.Keys6 :
+                        map.CircleSize == 7 ? Quaver.API.Enums.GameMode.Keys7 :
+                        map.CircleSize == 8 ? Quaver.API.Enums.GameMode.Keys7 :
+                        map.CircleSize == 9 ? Quaver.API.Enums.GameMode.Keys9 : Quaver.API.Enums.GameMode.Keys10,
                         SongLength = map.TotalTime,
                         Game = MapGame.Osu,
                         OriginalGame = OtherGameMapDatabaseGame.Osu,

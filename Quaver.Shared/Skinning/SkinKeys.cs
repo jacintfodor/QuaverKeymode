@@ -94,6 +94,8 @@ namespace Quaver.Shared.Skinning
             Color.Transparent,
             Color.Transparent,
             Color.Transparent,
+            Color.Transparent,
+            Color.Transparent,
         };
 
         internal float BgMaskAlpha { get; private set;  }

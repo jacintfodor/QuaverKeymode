@@ -173,10 +173,24 @@ namespace Quaver.Shared.Screens.Options
                 {
                     new OptionsSubcategory("Scrolling", new List<OptionsItem>()
                     {
+                        new OptionsItemScrollDirection(containerRect, "1K Scroll Direction", ConfigManager.ScrollDirection1K),
+                        new OptionsItemScrollDirection(containerRect, "2K Scroll Direction", ConfigManager.ScrollDirection2K),
+                        new OptionsItemScrollDirection(containerRect, "3K Scroll Direction", ConfigManager.ScrollDirection3K),
                         new OptionsItemScrollDirection(containerRect, "4K Scroll Direction", ConfigManager.ScrollDirection4K),
+                        new OptionsItemScrollDirection(containerRect, "5K Scroll Direction", ConfigManager.ScrollDirection5K),
+                        new OptionsItemScrollDirection(containerRect, "6K Scroll Direction", ConfigManager.ScrollDirection6K),
                         new OptionsItemScrollDirection(containerRect, "7K Scroll Direction", ConfigManager.ScrollDirection7K),
+                        new OptionsItemScrollDirection(containerRect, "9K Scroll Direction", ConfigManager.ScrollDirection9K),
+                        new OptionsItemScrollDirection(containerRect, "10K Scroll Direction", ConfigManager.ScrollDirection10K),
+                        new OptionsSlider(containerRect, "1K Scroll Speed", ConfigManager.ScrollSpeed1K, i => $"{i / 10f:0.0}"),
+                        new OptionsSlider(containerRect, "2K Scroll Speed", ConfigManager.ScrollSpeed2K, i => $"{i / 10f:0.0}"),
+                        new OptionsSlider(containerRect, "3K Scroll Speed", ConfigManager.ScrollSpeed3K, i => $"{i / 10f:0.0}"),
                         new OptionsSlider(containerRect, "4K Scroll Speed", ConfigManager.ScrollSpeed4K, i => $"{i / 10f:0.0}"),
+                        new OptionsSlider(containerRect, "5K Scroll Speed", ConfigManager.ScrollSpeed5K, i => $"{i / 10f:0.0}"),
+                        new OptionsSlider(containerRect, "6K Scroll Speed", ConfigManager.ScrollSpeed6K, i => $"{i / 10f:0.0}"),
                         new OptionsSlider(containerRect, "7K Scroll Speed", ConfigManager.ScrollSpeed7K, i => $"{i / 10f:0.0}"),
+                        new OptionsSlider(containerRect, "9K Scroll Speed", ConfigManager.ScrollSpeed9K, i => $"{i / 10f:0.0}"),
+                        new OptionsSlider(containerRect, "10K Scroll Speed", ConfigManager.ScrollSpeed10K, i => $"{i / 10f:0.0}"),
                     }),
                     new OptionsSubcategory("Scratch Lane", new List<OptionsItem>()
                     {
@@ -265,12 +279,44 @@ namespace Quaver.Shared.Screens.Options
                 {
                     new OptionsSubcategory("Gameplay", new List<OptionsItem>()
                     {
+                        new OptionsItemKeybindMultiple(containerRect, "1K Gameplay Layout", new List<Bindable<Keys>>()
+                        {
+                            ConfigManager.KeyMania1K1
+                        }),
+                        new OptionsItemKeybindMultiple(containerRect, "2K Gameplay Layout", new List<Bindable<Keys>>()
+                        {
+                            ConfigManager.KeyMania2K1,
+                            ConfigManager.KeyMania2K2
+                        }),
+                        new OptionsItemKeybindMultiple(containerRect, "3K Gameplay Layout", new List<Bindable<Keys>>()
+                        {
+                            ConfigManager.KeyMania3K1,
+                            ConfigManager.KeyMania3K2,
+                            ConfigManager.KeyMania3K3
+                        }),
                         new OptionsItemKeybindMultiple(containerRect, "4K Gameplay Layout", new List<Bindable<Keys>>()
                         {
                             ConfigManager.KeyMania4K1,
                             ConfigManager.KeyMania4K2,
                             ConfigManager.KeyMania4K3,
                             ConfigManager.KeyMania4K4
+                        }),
+                        new OptionsItemKeybindMultiple(containerRect, "5K Gameplay Layout", new List<Bindable<Keys>>()
+                        {
+                            ConfigManager.KeyMania5K1,
+                            ConfigManager.KeyMania5K2,
+                            ConfigManager.KeyMania5K3,
+                            ConfigManager.KeyMania5K4,
+                            ConfigManager.KeyMania5K5
+                        }),
+                        new OptionsItemKeybindMultiple(containerRect, "6K Gameplay Layout", new List<Bindable<Keys>>()
+                        {
+                            ConfigManager.KeyMania6K1,
+                            ConfigManager.KeyMania6K2,
+                            ConfigManager.KeyMania6K3,
+                            ConfigManager.KeyMania6K4,
+                            ConfigManager.KeyMania6K5,
+                            ConfigManager.KeyMania6K6
                         }),
                         new OptionsItemKeybindMultiple(containerRect, "7K Gameplay Layout", new List<Bindable<Keys>>()
                         {
@@ -281,6 +327,31 @@ namespace Quaver.Shared.Screens.Options
                             ConfigManager.KeyMania7K5,
                             ConfigManager.KeyMania7K6,
                             ConfigManager.KeyMania7K7,
+                        }),
+                        new OptionsItemKeybindMultiple(containerRect, "9K Gameplay Layout", new List<Bindable<Keys>>()
+                        {
+                            ConfigManager.KeyMania9K1,
+                            ConfigManager.KeyMania9K2,
+                            ConfigManager.KeyMania9K3,
+                            ConfigManager.KeyMania9K4,
+                            ConfigManager.KeyMania9K5,
+                            ConfigManager.KeyMania9K6,
+                            ConfigManager.KeyMania9K7,
+                            ConfigManager.KeyMania9K8,
+                            ConfigManager.KeyMania9K9
+                        }),
+                        new OptionsItemKeybindMultiple(containerRect, "10K Gameplay Layout", new List<Bindable<Keys>>()
+                        {
+                            ConfigManager.KeyMania10K1,
+                            ConfigManager.KeyMania10K2,
+                            ConfigManager.KeyMania10K3,
+                            ConfigManager.KeyMania10K4,
+                            ConfigManager.KeyMania10K5,
+                            ConfigManager.KeyMania10K6,
+                            ConfigManager.KeyMania10K7,
+                            ConfigManager.KeyMania10K8,
+                            ConfigManager.KeyMania10K9,
+                            ConfigManager.KeyMania10K10
                         }),
                         new OptionsItemKeybindMultiple(containerRect, "7K + 1 Gameplay Layout", new List<Bindable<Keys>>()
                         {

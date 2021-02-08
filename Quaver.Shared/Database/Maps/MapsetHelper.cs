@@ -323,6 +323,16 @@ namespace Quaver.Shared.Database.Maps
                             mapsetsToRemove.Add(x);
                     });
                     break;
+                // Remove any maps that aren't 7K+1
+                case SelectFilterGameMode.Keys8:
+                    mapsets.ForEach(x =>
+                    {
+                        x.Maps.RemoveAll(y => y.HasScratchKey == false);
+
+                        if (x.Maps.Count == 0)
+                            mapsetsToRemove.Add(x);
+                    });
+                    break;
                 // Remove any maps that aren't 9K
                 case SelectFilterGameMode.Keys9:
                     mapsets.ForEach(x =>

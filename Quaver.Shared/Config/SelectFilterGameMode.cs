@@ -10,6 +10,7 @@ namespace Quaver.Shared.Config
         Keys5,
         Keys6,
         Keys7,
+        Keys8,
         Keys9,
         Keys10,
     }
