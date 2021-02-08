@@ -60,6 +60,17 @@ namespace Quaver.Shared.Screens.Importing
         /// <returns></returns>
         public override UserClientStatus GetClientStatus() => null;
 
+        /// <summary>
+        /// </summary>
+        public ImportingScreen(bool fromSelect = false, bool fullSync = false)
+        {
+            ComingFromSelect = fromSelect;
+            FullSync = fullSync;
+
+            PreviouslySelectedMap = MapManager.Selected.Value;
+            View = new ImportingScreenView(this);
+        }
+
         /// <inheritdoc />
         /// <summary>
         /// </summary>
