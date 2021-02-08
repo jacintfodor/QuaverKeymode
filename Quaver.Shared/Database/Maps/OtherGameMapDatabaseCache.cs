@@ -305,7 +305,7 @@ namespace Quaver.Shared.Database.Maps
                 }
 
                 // Find all osu! maps that are 4K and 7K and order them by their difficulty value.
-                var osuBeatmaps = db.Beatmaps.Where(x => x.GameMode == GameMode.Mania && (x.CircleSize == 4 || x.CircleSize == 7  || x.CircleSize == 8)).ToList();
+                var osuBeatmaps = db.Beatmaps.Where(x => x.GameMode == GameMode.Mania && (x.CircleSize == 1 || x.CircleSize == 2 || x.CircleSize == 3 || x.CircleSize == 4 || x.CircleSize == 5 || x.CircleSize == 6 || x.CircleSize == 7  || x.CircleSize == 8 || x.CircleSize == 9 || x.CircleSize == 10)).ToList();
                 osuBeatmaps = osuBeatmaps.OrderBy(x => x.DiffStarRatingMania.ContainsKey(Mods.None) ? x.DiffStarRatingMania[Mods.None] : 0).ToList();
 
                 var osuToQuaverMaps = new List<OtherGameMap>();
@@ -330,7 +330,7 @@ namespace Quaver.Shared.Database.Maps
                         Source = map.SongSource,
                         Tags = map.SongTags,
                         // ReSharper disable once CompareOfFloatsByEqualityOperator
-                        Mode = map.CircleSize == 4 ? Quaver.API.Enums.GameMode.Keys4 : Quaver.API.Enums.GameMode.Keys7,
+                        Mode = (API.Enums.GameMode)map.CircleSize,
                         SongLength = map.TotalTime,
                         Game = MapGame.Osu,
                         OriginalGame = OtherGameMapDatabaseGame.Osu,

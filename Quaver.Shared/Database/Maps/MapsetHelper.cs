@@ -253,11 +253,61 @@ namespace Quaver.Shared.Database.Maps
             {
                 case SelectFilterGameMode.All:
                     break;
-                // Remove any maps that aren't 7K
+                // Remove any maps that aren't 1K
+                case SelectFilterGameMode.Keys1:
+                    mapsets.ForEach(x =>
+                    {
+                        x.Maps.RemoveAll(y => y.Mode != GameMode.Keys1);
+
+                        if (x.Maps.Count == 0)
+                            mapsetsToRemove.Add(x);
+                    });
+                    break;
+                // Remove any maps that aren't 2K
+                case SelectFilterGameMode.Keys2:
+                    mapsets.ForEach(x =>
+                    {
+                        x.Maps.RemoveAll(y => y.Mode != GameMode.Keys2);
+
+                        if (x.Maps.Count == 0)
+                            mapsetsToRemove.Add(x);
+                    });
+                    break;
+                // Remove any maps that aren't 3K
+                case SelectFilterGameMode.Keys3:
+                    mapsets.ForEach(x =>
+                    {
+                        x.Maps.RemoveAll(y => y.Mode != GameMode.Keys3);
+
+                        if (x.Maps.Count == 0)
+                            mapsetsToRemove.Add(x);
+                    });
+                    break;
+                // Remove any maps that aren't 4K
                 case SelectFilterGameMode.Keys4:
                     mapsets.ForEach(x =>
                     {
                         x.Maps.RemoveAll(y => y.Mode != GameMode.Keys4);
+
+                        if (x.Maps.Count == 0)
+                            mapsetsToRemove.Add(x);
+                    });
+                    break;
+                // Remove any maps that aren't 5K
+                case SelectFilterGameMode.Keys5:
+                    mapsets.ForEach(x =>
+                    {
+                        x.Maps.RemoveAll(y => y.Mode != GameMode.Keys5);
+
+                        if (x.Maps.Count == 0)
+                            mapsetsToRemove.Add(x);
+                    });
+                    break;
+                // Remove any maps that aren't 6K
+                case SelectFilterGameMode.Keys6:
+                    mapsets.ForEach(x =>
+                    {
+                        x.Maps.RemoveAll(y => y.Mode != GameMode.Keys6);
 
                         if (x.Maps.Count == 0)
                             mapsetsToRemove.Add(x);
@@ -268,6 +318,26 @@ namespace Quaver.Shared.Database.Maps
                     mapsets.ForEach(x =>
                     {
                         x.Maps.RemoveAll(y => y.Mode != GameMode.Keys7);
+
+                        if (x.Maps.Count == 0)
+                            mapsetsToRemove.Add(x);
+                    });
+                    break;
+                // Remove any maps that aren't 9K
+                case SelectFilterGameMode.Keys9:
+                    mapsets.ForEach(x =>
+                    {
+                        x.Maps.RemoveAll(y => y.Mode != GameMode.Keys9);
+
+                        if (x.Maps.Count == 0)
+                            mapsetsToRemove.Add(x);
+                    });
+                    break;
+                // Remove any maps that aren't 10K
+                case SelectFilterGameMode.Keys10:
+                    mapsets.ForEach(x =>
+                    {
+                        x.Maps.RemoveAll(y => y.Mode != GameMode.Keys10);
 
                         if (x.Maps.Count == 0)
                             mapsetsToRemove.Add(x);
@@ -618,13 +688,58 @@ namespace Quaver.Shared.Database.Maps
                             case SearchFilterOption.Keys:
                                 switch (map.Mode)
                                 {
+                                    case GameMode.Keys1:
+                                        if (!float.TryParse(searchQuery.Value, out var val1k))
+                                            exitLoop = true;
+
+                                        var keyCount1k = 1;
+
+                                        if (!CompareValues(keyCount1k, val1k, searchQuery.Operator))
+                                            exitLoop = true;
+                                        break;
+                                    case GameMode.Keys2:
+                                        if (!float.TryParse(searchQuery.Value, out var val2k))
+                                            exitLoop = true;
+
+                                        var keyCount2k = 2;
+
+                                        if (!CompareValues(keyCount2k, val2k, searchQuery.Operator))
+                                            exitLoop = true;
+                                        break;
+                                    case GameMode.Keys3:
+                                        if (!float.TryParse(searchQuery.Value, out var val3k))
+                                            exitLoop = true;
+
+                                        var keyCount3k = 3;
+
+                                        if (!CompareValues(keyCount3k, val3k, searchQuery.Operator))
+                                            exitLoop = true;
+                                        break;
                                     case GameMode.Keys4:
                                         if (!float.TryParse(searchQuery.Value, out var val4k))
                                             exitLoop = true;
 
-                                        var keyCount = map.HasScratchKey ? 5 : 4;
+                                        var keyCount4k = 4;
 
-                                        if (!CompareValues(keyCount, val4k, searchQuery.Operator))
+                                        if (!CompareValues(keyCount4k, val4k, searchQuery.Operator))
+                                            exitLoop = true;
+                                        break;
+                                    case GameMode.Keys5:
+                                        if (!float.TryParse(searchQuery.Value, out var val5k))
+                                            exitLoop = true;
+
+                                        var keyCount5k = 5;
+
+                                        if (!CompareValues(keyCount5k, val5k, searchQuery.Operator))
+                                            exitLoop = true;
+                                        break;
+                                    case GameMode.Keys6:
+                                        if (!float.TryParse(searchQuery.Value, out var val6k))
+                                            exitLoop = true;
+
+                                        var keyCount6k = 6;
+
+                                        if (!CompareValues(keyCount6k, val6k, searchQuery.Operator))
                                             exitLoop = true;
                                         break;
                                     case GameMode.Keys7:
@@ -634,6 +749,24 @@ namespace Quaver.Shared.Database.Maps
                                         var keyCount7k = map.HasScratchKey ? 8 : 7;
 
                                         if (!CompareValues(keyCount7k, val7k, searchQuery.Operator))
+                                            exitLoop = true;
+                                        break;
+                                    case GameMode.Keys9:
+                                        if (!float.TryParse(searchQuery.Value, out var val9k))
+                                            exitLoop = true;
+
+                                        var keyCount9k = 9;
+
+                                        if (!CompareValues(keyCount9k, val9k, searchQuery.Operator))
+                                            exitLoop = true;
+                                        break;
+                                    case GameMode.Keys10:
+                                        if (!float.TryParse(searchQuery.Value, out var val10k))
+                                            exitLoop = true;
+
+                                        var keyCount10k = 10;
+
+                                        if (!CompareValues(keyCount10k, val10k, searchQuery.Operator))
                                             exitLoop = true;
                                         break;
                                     default:

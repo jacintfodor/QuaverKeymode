@@ -541,6 +541,35 @@ namespace Quaver.Shared.Screens.Gameplay.Rulesets.Keys.HitObjects
         {
             switch (mode)
             {
+                case GameMode.Keys1:
+                    switch (lane)
+                    {
+                        case 0:
+                            // Already downwards
+                            break;
+                    }
+                    break;
+                case GameMode.Keys2:
+                    switch (lane)
+                    {
+                        case 0:
+                            return 90;
+                        case 1:
+                            return 270;
+                    }
+                    break;
+                case GameMode.Keys3:
+                    switch (lane)
+                    {
+                        case 0:
+                            return 90;
+                        case 1:
+                            // Already downwards
+                            break;
+                        case 2:
+                            return 270;
+                    }
+                    break;
                 case GameMode.Keys4:
                     switch (lane)
                     {
@@ -552,6 +581,39 @@ namespace Quaver.Shared.Screens.Gameplay.Rulesets.Keys.HitObjects
                         case 2:
                             return 180;
                         case 3:
+                            return 270;
+                    }
+                    break;
+                case GameMode.Keys5:
+                    switch (lane)
+                    {
+                        case 0:
+                            return 90;
+                        case 1:
+                            return 135;
+                        case 2:
+                            // Already downwards
+                            break;
+                        case 3:
+                            return 225;
+                        case 4:
+                            return 270;
+                    }
+                    break;
+                case GameMode.Keys6:
+                    switch (lane)
+                    {
+                        case 0:
+                            return 90;
+                        case 1:
+                            return 135;
+                        case 2:
+                            return 180;
+                        case 3:
+                            return 180;
+                        case 4:
+                            return 225;
+                        case 5:
                             return 270;
                     }
                     break;
@@ -574,7 +636,57 @@ namespace Quaver.Shared.Screens.Gameplay.Rulesets.Keys.HitObjects
                         case 6:
                             return 270;
                     }
-
+                    break;
+                case GameMode.Keys9:
+                    switch (lane)
+                    {
+                        case 0:
+                            return 90;
+                        case 1:
+                            return 135;
+                        case 2:
+                            return 180;
+                        case 3:
+                            return 225;
+                        case 4:
+                            // Already downwards
+                            break;
+                        case 5:
+                            return 135;
+                        case 6:
+                            return 180;
+                        case 7:
+                            return 225;
+                        case 8:
+                            return 270;
+                    }
+                    break;
+                case GameMode.Keys10:
+                    switch (lane)
+                    {
+                        case 0:
+                            return 90;
+                        case 1:
+                            return 135;
+                        case 2:
+                            // Already downwards
+                            break;
+                        case 3:
+                            return 225;
+                        case 4:
+                            return 270;
+                        case 5:
+                            return 90;
+                        case 6:
+                            return 135;
+                        case 7:
+                            // Already downwards
+                            break;
+                        case 8:
+                            return 225;
+                        case 9:
+                            return 270;
+                    }
                     break;
             }
 

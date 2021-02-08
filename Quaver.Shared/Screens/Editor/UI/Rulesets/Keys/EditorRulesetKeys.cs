@@ -253,12 +253,40 @@ namespace Quaver.Shared.Screens.Editor.UI.Rulesets.Keys
         {
             switch (Screen.Ruleset.WorkingMap.Mode)
             {
+                case GameMode.Keys1:
+                    ConfigManager.ScrollDirection1K.Value = ConfigManager.ScrollDirection1K.Value != ScrollDirection.Down
+                        ? ScrollDirection.Down : ScrollDirection.Up;
+                    break;
+                case GameMode.Keys2:
+                    ConfigManager.ScrollDirection2K.Value = ConfigManager.ScrollDirection2K.Value != ScrollDirection.Down
+                        ? ScrollDirection.Down : ScrollDirection.Up;
+                    break;
+                case GameMode.Keys3:
+                    ConfigManager.ScrollDirection3K.Value = ConfigManager.ScrollDirection3K.Value != ScrollDirection.Down
+                        ? ScrollDirection.Down : ScrollDirection.Up;
+                    break;
                 case GameMode.Keys4:
                     ConfigManager.ScrollDirection4K.Value = ConfigManager.ScrollDirection4K.Value != ScrollDirection.Down
                         ? ScrollDirection.Down : ScrollDirection.Up;
                     break;
+                case GameMode.Keys5:
+                    ConfigManager.ScrollDirection5K.Value = ConfigManager.ScrollDirection5K.Value != ScrollDirection.Down
+                        ? ScrollDirection.Down : ScrollDirection.Up;
+                    break;
+                case GameMode.Keys6:
+                    ConfigManager.ScrollDirection6K.Value = ConfigManager.ScrollDirection6K.Value != ScrollDirection.Down
+                        ? ScrollDirection.Down : ScrollDirection.Up;
+                    break;
                 case GameMode.Keys7:
                     ConfigManager.ScrollDirection7K.Value = ConfigManager.ScrollDirection7K.Value != ScrollDirection.Down
+                        ? ScrollDirection.Down : ScrollDirection.Up;
+                    break;
+                case GameMode.Keys9:
+                    ConfigManager.ScrollDirection9K.Value = ConfigManager.ScrollDirection9K.Value != ScrollDirection.Down
+                        ? ScrollDirection.Down : ScrollDirection.Up;
+                    break;
+                case GameMode.Keys10:
+                    ConfigManager.ScrollDirection10K.Value = ConfigManager.ScrollDirection10K.Value != ScrollDirection.Down
                         ? ScrollDirection.Down : ScrollDirection.Up;
                     break;
                 default:

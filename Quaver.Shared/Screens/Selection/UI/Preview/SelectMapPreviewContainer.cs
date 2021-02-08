@@ -260,9 +260,14 @@ namespace Quaver.Shared.Screens.Selection.UI.Preview
                     x.StopHolding();
                 });
 
-                var scroll = LoadedGameplayScreen.Map.Mode == GameMode.Keys4
-                    ? ConfigManager.ScrollDirection4K
-                    : ConfigManager.ScrollDirection7K;
+                var scroll = LoadedGameplayScreen.Map.Mode == GameMode.Keys1 ? ConfigManager.ScrollDirection1K :
+                LoadedGameplayScreen.Map.Mode == GameMode.Keys2 ? ConfigManager.ScrollDirection2K :
+                LoadedGameplayScreen.Map.Mode == GameMode.Keys3 ? ConfigManager.ScrollDirection3K :
+                LoadedGameplayScreen.Map.Mode == GameMode.Keys4 ? ConfigManager.ScrollDirection4K :
+                LoadedGameplayScreen.Map.Mode == GameMode.Keys5 ? ConfigManager.ScrollDirection5K :
+                LoadedGameplayScreen.Map.Mode == GameMode.Keys6 ? ConfigManager.ScrollDirection6K :
+                LoadedGameplayScreen.Map.Mode == GameMode.Keys7 ? ConfigManager.ScrollDirection7K :
+                LoadedGameplayScreen.Map.Mode == GameMode.Keys9 ? ConfigManager.ScrollDirection9K : ConfigManager.ScrollDirection10K;
 
                 var skin = SkinManager.Skin.Keys[e.Result.Map.Mode];
 

@@ -52,10 +52,24 @@ namespace Quaver.Shared.Screens.Gameplay.Rulesets.Keys
             {
                 switch (MapManager.Selected.Value?.Qua?.Mode)
                 {
+                    case GameMode.Keys1:
+                        return ConfigManager.ScrollDirection1K.Value;
+                    case GameMode.Keys2:
+                        return ConfigManager.ScrollDirection2K.Value;
+                    case GameMode.Keys3:
+                        return ConfigManager.ScrollDirection3K.Value;
                     case GameMode.Keys4:
                         return ConfigManager.ScrollDirection4K.Value;
+                    case GameMode.Keys5:
+                        return ConfigManager.ScrollDirection5K.Value;
+                    case GameMode.Keys6:
+                        return ConfigManager.ScrollDirection6K.Value;
                     case GameMode.Keys7:
                         return ConfigManager.ScrollDirection7K.Value;
+                    case GameMode.Keys9:
+                        return ConfigManager.ScrollDirection9K.Value;
+                    case GameMode.Keys10:
+                        return ConfigManager.ScrollDirection10K.Value;
                     default:
                         return ConfigManager.ScrollDirection4K.Value;
                 }

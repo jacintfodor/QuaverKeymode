@@ -172,14 +172,57 @@ namespace Quaver.Shared.Config
         internal static Bindable<bool> DisplaySongTimeProgress { get; private set; }
 
         /// <summary>
+        ///     The scroll speed for mania 1k
+        /// </summary>
+        internal static BindableInt ScrollSpeed1K { get; private set; }
+        /// <summary>
+        ///     The scroll speed for mania 2k
+        /// </summary>
+        internal static BindableInt ScrollSpeed2K { get; private set; }
+        /// <summary>
+        ///     The scroll speed for mania 3k
+        /// </summary>
+        internal static BindableInt ScrollSpeed3K { get; private set; }
+        /// <summary>
         ///     The scroll speed for mania 4k
         /// </summary>
         internal static BindableInt ScrollSpeed4K { get; private set; }
+        /// <summary>
+        ///     The scroll speed for mania 5k
+        /// </summary>
+        internal static BindableInt ScrollSpeed5K { get; private set; }
+        /// <summary>
+        ///     The scroll speed for mania 6k
+        /// </summary>
+        internal static BindableInt ScrollSpeed6K { get; private set; }
 
         /// <summary>
         ///     The scroll speed for mania 7k
         /// </summary>
         internal static BindableInt ScrollSpeed7K { get; private set; }
+        /// <summary>
+        ///     The scroll speed for mania 9k
+        /// </summary>
+        internal static BindableInt ScrollSpeed9K { get; private set; }
+        /// <summary>
+        ///     The scroll speed for mania 10k
+        /// </summary>
+        internal static BindableInt ScrollSpeed10K { get; private set; }
+
+        /// <summary>
+        ///     Direction in which hit objects will be moving for 1K gamemode
+        /// </summary>
+        internal static Bindable<ScrollDirection> ScrollDirection1K { get; private set; }
+
+        /// <summary>
+        ///     Direction in which hit objects will be moving for 2K gamemode
+        /// </summary>
+        internal static Bindable<ScrollDirection> ScrollDirection2K { get; private set; }
+
+        /// <summary>
+        ///     Direction in which hit objects will be moving for 3K gamemode
+        /// </summary>
+        internal static Bindable<ScrollDirection> ScrollDirection3K { get; private set; }
 
         /// <summary>
         ///     Direction in which hit objects will be moving for 4K gamemode
@@ -187,9 +230,29 @@ namespace Quaver.Shared.Config
         internal static Bindable<ScrollDirection> ScrollDirection4K { get; private set; }
 
         /// <summary>
+        ///     Direction in which hit objects will be moving for 5K gamemode
+        /// </summary>
+        internal static Bindable<ScrollDirection> ScrollDirection5K { get; private set; }
+
+        /// <summary>
+        ///     Direction in which hit objects will be moving for 6K gamemode
+        /// </summary>
+        internal static Bindable<ScrollDirection> ScrollDirection6K { get; private set; }
+
+        /// <summary>
         ///     Direction in which hit objects will be moving for 7K gamemode
         /// </summary>
         internal static Bindable<ScrollDirection> ScrollDirection7K { get; private set; }
+
+        /// <summary>
+        ///     Direction in which hit objects will be moving for 9K gamemode
+        /// </summary>
+        internal static Bindable<ScrollDirection> ScrollDirection9K { get; private set; }
+
+        /// <summary>
+        ///     Direction in which hit objects will be moving for 10K gamemode
+        /// </summary>
+        internal static Bindable<ScrollDirection> ScrollDirection10K { get; private set; }
 
         /// <summary>
         ///     The offset of the notes compared to the song start.
@@ -584,12 +647,49 @@ namespace Quaver.Shared.Config
         internal static Bindable<Keys> KeyNavigateSelect { get; private set; }
 
         /// <summary>
+        ///     Keybindings for 1K
+        /// </summary>
+        internal static Bindable<Keys> KeyMania1K1 { get; private set; }
+
+        /// <summary>
+        ///     Keybindings for 2K
+        /// </summary>
+        internal static Bindable<Keys> KeyMania2K1 { get; private set; }
+        internal static Bindable<Keys> KeyMania2K2 { get; private set; }
+
+        /// <summary>
+        ///     Keybindings for 3K
+        /// </summary>
+        internal static Bindable<Keys> KeyMania3K1 { get; private set; }
+        internal static Bindable<Keys> KeyMania3K2 { get; private set; }
+        internal static Bindable<Keys> KeyMania3K3 { get; private set; }
+
+        /// <summary>
         ///     Keybindings for 4K
         /// </summary>
         internal static Bindable<Keys> KeyMania4K1 { get; private set; }
         internal static Bindable<Keys> KeyMania4K2 { get; private set; }
         internal static Bindable<Keys> KeyMania4K3 { get; private set; }
         internal static Bindable<Keys> KeyMania4K4 { get; private set; }
+
+        /// <summary>
+        ///     Keybindings for 5K
+        /// </summary>
+        internal static Bindable<Keys> KeyMania5K1 { get; private set; }
+        internal static Bindable<Keys> KeyMania5K2 { get; private set; }
+        internal static Bindable<Keys> KeyMania5K3 { get; private set; }
+        internal static Bindable<Keys> KeyMania5K4 { get; private set; }
+        internal static Bindable<Keys> KeyMania5K5 { get; private set; }
+
+        /// <summary>
+        ///     Keybindings for 6K
+        /// </summary>
+        internal static Bindable<Keys> KeyMania6K1 { get; private set; }
+        internal static Bindable<Keys> KeyMania6K2 { get; private set; }
+        internal static Bindable<Keys> KeyMania6K3 { get; private set; }
+        internal static Bindable<Keys> KeyMania6K4 { get; private set; }
+        internal static Bindable<Keys> KeyMania6K5 { get; private set; }
+        internal static Bindable<Keys> KeyMania6K6 { get; private set; }
 
         /// <summary>
         ///     Keybindings for 7K
@@ -601,6 +701,33 @@ namespace Quaver.Shared.Config
         internal static Bindable<Keys> KeyMania7K5 { get; private set; }
         internal static Bindable<Keys> KeyMania7K6 { get; private set; }
         internal static Bindable<Keys> KeyMania7K7 { get; private set; }
+
+        /// <summary>
+        ///     Keybindings for 9K
+        /// </summary>
+        internal static Bindable<Keys> KeyMania9K1 { get; private set; }
+        internal static Bindable<Keys> KeyMania9K2 { get; private set; }
+        internal static Bindable<Keys> KeyMania9K3 { get; private set; }
+        internal static Bindable<Keys> KeyMania9K4 { get; private set; }
+        internal static Bindable<Keys> KeyMania9K5 { get; private set; }
+        internal static Bindable<Keys> KeyMania9K6 { get; private set; }
+        internal static Bindable<Keys> KeyMania9K7 { get; private set; }
+        internal static Bindable<Keys> KeyMania9K8 { get; private set; }
+        internal static Bindable<Keys> KeyMania9K9 { get; private set; }
+
+        /// <summary>
+        ///     Keybindings for 10K
+        /// </summary>
+        internal static Bindable<Keys> KeyMania10K1 { get; private set; }
+        internal static Bindable<Keys> KeyMania10K2 { get; private set; }
+        internal static Bindable<Keys> KeyMania10K3 { get; private set; }
+        internal static Bindable<Keys> KeyMania10K4 { get; private set; }
+        internal static Bindable<Keys> KeyMania10K5 { get; private set; }
+        internal static Bindable<Keys> KeyMania10K6 { get; private set; }
+        internal static Bindable<Keys> KeyMania10K7 { get; private set; }
+        internal static Bindable<Keys> KeyMania10K8 { get; private set; }
+        internal static Bindable<Keys> KeyMania10K9 { get; private set; }
+        internal static Bindable<Keys> KeyMania10K10 { get; private set; }
 
         /// <summary>
         ///     Keybindings for 4K (co-op 2 player)
@@ -815,10 +942,24 @@ namespace Quaver.Shared.Config
             FpsLimiterType = ReadValue(@"FpsLimiterType", FpsLimitType.Unlimited, data);
             CustomFpsLimit = ReadInt(@"CustomFpsLimit", 240, 60, int.MaxValue, data);
             SmoothAudioTimingGameplay = ReadValue(@"SmoothAudioTimingGameplay", false, data);
+            ScrollSpeed1K = ReadInt(@"ScrollSpeed1K", 150, 50, 1000, data);
+            ScrollSpeed2K = ReadInt(@"ScrollSpeed2K", 150, 50, 1000, data);
+            ScrollSpeed3K = ReadInt(@"ScrollSpeed3K", 150, 50, 1000, data);
             ScrollSpeed4K = ReadInt(@"ScrollSpeed4K", 150, 50, 1000, data);
+            ScrollSpeed5K = ReadInt(@"ScrollSpeed5K", 150, 50, 1000, data);
+            ScrollSpeed6K = ReadInt(@"ScrollSpeed6K", 150, 50, 1000, data);
             ScrollSpeed7K = ReadInt(@"ScrollSpeed7K", 150, 50, 1000, data);
+            ScrollSpeed9K = ReadInt(@"ScrollSpeed9K", 150, 50, 1000, data);
+            ScrollSpeed10K = ReadInt(@"ScrollSpeed10K", 150, 50, 1000, data);
+            ScrollDirection1K = ReadValue(@"ScrollDirection1K", ScrollDirection.Down, data);
+            ScrollDirection2K = ReadValue(@"ScrollDirection2K", ScrollDirection.Down, data);
+            ScrollDirection3K = ReadValue(@"ScrollDirection3K", ScrollDirection.Down, data);
             ScrollDirection4K = ReadValue(@"ScrollDirection4K", ScrollDirection.Down, data);
+            ScrollDirection5K = ReadValue(@"ScrollDirection5K", ScrollDirection.Down, data);
+            ScrollDirection6K = ReadValue(@"ScrollDirection6K", ScrollDirection.Down, data);
             ScrollDirection7K = ReadValue(@"ScrollDirection7K", ScrollDirection.Down, data);
+            ScrollDirection9K = ReadValue(@"ScrollDirection9K", ScrollDirection.Down, data);
+            ScrollDirection10K = ReadValue(@"ScrollDirection10K", ScrollDirection.Down, data);
             GlobalAudioOffset = ReadInt(@"GlobalAudioOffset", 0, -300, 300, data);
             Skin = ReadValue(@"Skin", "", data);
             DefaultSkin = ReadValue(@"DefaultSkin", DefaultSkins.Bar, data);
@@ -841,10 +982,27 @@ namespace Quaver.Shared.Config
             KeyNavigateDown = ReadValue(@"KeyNavigateDown", Keys.Down, data);
             KeyNavigateBack = ReadValue(@"KeyNavigateBack", Keys.Escape, data);
             KeyNavigateSelect = ReadValue(@"KeyNavigateSelect", Keys.Enter, data);
+            KeyMania1K1 = ReadValue(@"KeyMania1K1", Keys.Space, data);
+            KeyMania2K1 = ReadValue(@"KeyMania2K1", Keys.S, data);
+            KeyMania2K2 = ReadValue(@"KeyMania2K2", Keys.K, data);
+            KeyMania3K1 = ReadValue(@"KeyMania3K1", Keys.D, data);
+            KeyMania3K2 = ReadValue(@"KeyMania3K2", Keys.Space, data);
+            KeyMania3K3 = ReadValue(@"KeyMania3K3", Keys.K, data);
             KeyMania4K1 = ReadValue(@"KeyMania4K1", Keys.A, data);
             KeyMania4K2 = ReadValue(@"KeyMania4K2", Keys.S, data);
             KeyMania4K3 = ReadValue(@"KeyMania4K3", Keys.K, data);
             KeyMania4K4 = ReadValue(@"KeyMania4K4", Keys.L, data);
+            KeyMania5K1 = ReadValue(@"KeyMania5K1", Keys.A, data);
+            KeyMania5K2 = ReadValue(@"KeyMania5K2", Keys.S, data);
+            KeyMania5K3 = ReadValue(@"KeyMania5K3", Keys.Space, data);
+            KeyMania5K4 = ReadValue(@"KeyMania5K4", Keys.K, data);
+            KeyMania5K5 = ReadValue(@"KeyMania5K5", Keys.L, data);
+            KeyMania6K1 = ReadValue(@"KeyMania6K1", Keys.A, data);
+            KeyMania6K2 = ReadValue(@"KeyMania6K2", Keys.S, data);
+            KeyMania6K3 = ReadValue(@"KeyMania6K4", Keys.D, data);
+            KeyMania6K4 = ReadValue(@"KeyMania6K5", Keys.J, data);
+            KeyMania6K5 = ReadValue(@"KeyMania6K5", Keys.K, data);
+            KeyMania6K6 = ReadValue(@"KeyMania6K6", Keys.L, data);
             KeyMania7K1 = ReadValue(@"KeyMania7K1", Keys.A, data);
             KeyMania7K2 = ReadValue(@"KeyMania7K2", Keys.S, data);
             KeyMania7K3 = ReadValue(@"KeyMania7K3", Keys.D, data);
@@ -852,6 +1010,25 @@ namespace Quaver.Shared.Config
             KeyMania7K5 = ReadValue(@"KeyMania7K5", Keys.J, data);
             KeyMania7K6 = ReadValue(@"KeyMania7K6", Keys.K, data);
             KeyMania7K7 = ReadValue(@"KeyMania7K7", Keys.L, data);
+            KeyMania9K1 = ReadValue(@"KeyMania9K1", Keys.A, data);
+            KeyMania9K2 = ReadValue(@"KeyMania9K2", Keys.S, data);
+            KeyMania9K3 = ReadValue(@"KeyMania9K3", Keys.D, data);
+            KeyMania9K4 = ReadValue(@"KeyMania9K4", Keys.F, data);
+            KeyMania9K5 = ReadValue(@"KeyMania9K5", Keys.Space, data);
+            KeyMania9K6 = ReadValue(@"KeyMania9K6", Keys.J, data);
+            KeyMania9K7 = ReadValue(@"KeyMania9K7", Keys.K, data);
+            KeyMania9K8 = ReadValue(@"KeyMania9K8", Keys.L, data);
+            KeyMania9K9 = ReadValue(@"KeyMania9K9", Keys.OemSemicolon, data);
+            KeyMania10K1 = ReadValue(@"KeyMania10K1", Keys.A, data);
+            KeyMania10K2 = ReadValue(@"KeyMania10K2", Keys.S, data);
+            KeyMania10K3 = ReadValue(@"KeyMania10K3", Keys.D, data);
+            KeyMania10K4 = ReadValue(@"KeyMania10K4", Keys.F, data);
+            KeyMania10K5 = ReadValue(@"KeyMania10K5", Keys.Space, data);
+            KeyMania10K6 = ReadValue(@"KeyMania10K6", Keys.RightAlt, data);
+            KeyMania10K7 = ReadValue(@"KeyMania10K7", Keys.J, data);
+            KeyMania10K8 = ReadValue(@"KeyMania10K8", Keys.K, data);
+            KeyMania10K9 = ReadValue(@"KeyMania10K9", Keys.L, data);
+            KeyMania10K10 = ReadValue(@"KeyMania10K10", Keys.OemSemicolon, data);
             KeyCoop2P4K1 = ReadValue(@"KeyCoop2P4K1", Keys.Z, data);
             KeyCoop2P4K2 = ReadValue(@"KeyCoop2P4K2", Keys.X, data);
             KeyCoop2P4K3 = ReadValue(@"KeyCoop2P4K3", Keys.OemComma, data);

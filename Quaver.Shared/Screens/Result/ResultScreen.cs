@@ -100,7 +100,14 @@ namespace Quaver.Shared.Screens.Result
         /// <summary>
         ///     Reference to the user's set scroll speed.
         /// </summary>
-        private static int ScrollSpeed => Map.Mode == GameMode.Keys4 ? ConfigManager.ScrollSpeed4K.Value : ConfigManager.ScrollSpeed7K.Value;
+        private static int ScrollSpeed => Map.Mode == GameMode.Keys1 ? ConfigManager.ScrollSpeed1K.Value :
+            Map.Mode == GameMode.Keys2 ? ConfigManager.ScrollSpeed2K.Value :
+            Map.Mode == GameMode.Keys3 ? ConfigManager.ScrollSpeed3K.Value :
+            Map.Mode == GameMode.Keys4 ? ConfigManager.ScrollSpeed4K.Value :
+            Map.Mode == GameMode.Keys5 ? ConfigManager.ScrollSpeed5K.Value :
+            Map.Mode == GameMode.Keys6 ? ConfigManager.ScrollSpeed6K.Value :
+            Map.Mode == GameMode.Keys7 ? ConfigManager.ScrollSpeed7K.Value :
+            Map.Mode == GameMode.Keys9 ? ConfigManager.ScrollSpeed9K.Value : ConfigManager.ScrollSpeed10K.Value;
 
         /// <summary>
         ///     The last time the replay was exported

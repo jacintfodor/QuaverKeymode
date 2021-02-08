@@ -174,8 +174,15 @@ namespace Quaver.Shared.Screens.Gameplay.UI.Scoreboard
 
             switch (Screen.Map.Mode)
             {
+                case GameMode.Keys1:
+                case GameMode.Keys2:
+                case GameMode.Keys3:
                 case GameMode.Keys4:
+                case GameMode.Keys5:
+                case GameMode.Keys6:
                 case GameMode.Keys7:
+                case GameMode.Keys9:
+                case GameMode.Keys10:
                     if (screen.IsMultiplayerGame && Type == ScoreboardUserType.Other)
                     {
                         var mp = new ScoreProcessorMultiplayer((MultiplayerHealthType) OnlineManager.CurrentGame.HealthType, OnlineManager.CurrentGame.Lives);

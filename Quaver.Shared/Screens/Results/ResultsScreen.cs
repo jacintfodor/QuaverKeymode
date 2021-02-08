@@ -702,7 +702,14 @@ namespace Quaver.Shared.Screens.Results
             var profileName = UserProfileDatabaseCache.Selected.Value.Username;
             var username = !string.IsNullOrEmpty(profileName) ? profileName : ConfigManager.Username.Value;
 
-            var scrollSpeed = Map.Mode == GameMode.Keys4 ? ConfigManager.ScrollSpeed4K.Value : ConfigManager.ScrollSpeed7K.Value;
+            var scrollSpeed = Map.Mode == GameMode.Keys1 ? ConfigManager.ScrollSpeed1K.Value :
+            Map.Mode == GameMode.Keys2 ? ConfigManager.ScrollSpeed2K.Value :
+            Map.Mode == GameMode.Keys3 ? ConfigManager.ScrollSpeed3K.Value :
+            Map.Mode == GameMode.Keys4 ? ConfigManager.ScrollSpeed4K.Value :
+            Map.Mode == GameMode.Keys5 ? ConfigManager.ScrollSpeed5K.Value :
+            Map.Mode == GameMode.Keys6 ? ConfigManager.ScrollSpeed6K.Value :
+            Map.Mode == GameMode.Keys7 ? ConfigManager.ScrollSpeed7K.Value :
+            Map.Mode == GameMode.Keys9 ? ConfigManager.ScrollSpeed9K.Value : ConfigManager.ScrollSpeed10K.Value;
             var rankedAccuracy = screen.Ruleset.StandardizedReplayPlayer.ScoreProcessor.Accuracy;
 
             var score = Score.FromScoreProcessor(processor, screen.MapHash, username, scrollSpeed,
@@ -824,7 +831,14 @@ namespace Quaver.Shared.Screens.Results
                 Logger.Important($"Original Acc: {originalProcessor.Accuracy}% | Standard* Acc: {processor.Accuracy}%", LogType.Runtime);
             }
 
-            var scrollSpeed = Map.Mode == GameMode.Keys4 ? ConfigManager.ScrollSpeed4K.Value : ConfigManager.ScrollSpeed7K.Value;
+            var scrollSpeed = Map.Mode == GameMode.Keys1 ? ConfigManager.ScrollSpeed1K.Value :
+            Map.Mode == GameMode.Keys2 ? ConfigManager.ScrollSpeed2K.Value :
+            Map.Mode == GameMode.Keys3 ? ConfigManager.ScrollSpeed3K.Value :
+            Map.Mode == GameMode.Keys4 ? ConfigManager.ScrollSpeed4K.Value :
+            Map.Mode == GameMode.Keys5 ? ConfigManager.ScrollSpeed5K.Value :
+            Map.Mode == GameMode.Keys6 ? ConfigManager.ScrollSpeed6K.Value :
+            Map.Mode == GameMode.Keys7 ? ConfigManager.ScrollSpeed7K.Value :
+            Map.Mode == GameMode.Keys9 ? ConfigManager.ScrollSpeed9K.Value : ConfigManager.ScrollSpeed10K.Value;
 
             return true;
         }

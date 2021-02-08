@@ -530,11 +530,32 @@ namespace Quaver.Shared.Screens.Selection
 
             switch (MapManager.Selected.Value.Mode)
             {
+                case GameMode.Keys1:
+                    scrollSpeed = ConfigManager.ScrollSpeed1K;
+                    break;
+                case GameMode.Keys2:
+                    scrollSpeed = ConfigManager.ScrollSpeed2K;
+                    break;
+                case GameMode.Keys3:
+                    scrollSpeed = ConfigManager.ScrollSpeed3K;
+                    break;
                 case GameMode.Keys4:
                     scrollSpeed = ConfigManager.ScrollSpeed4K;
                     break;
+                case GameMode.Keys5:
+                    scrollSpeed = ConfigManager.ScrollSpeed5K;
+                    break;
+                case GameMode.Keys6:
+                    scrollSpeed = ConfigManager.ScrollSpeed6K;
+                    break;
                 case GameMode.Keys7:
                     scrollSpeed = ConfigManager.ScrollSpeed7K;
+                    break;
+                case GameMode.Keys9:
+                    scrollSpeed = ConfigManager.ScrollSpeed9K;
+                    break;
+                case GameMode.Keys10:
+                    scrollSpeed = ConfigManager.ScrollSpeed10K;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

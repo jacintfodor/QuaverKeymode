@@ -130,10 +130,24 @@ namespace Quaver.Shared.Screens.Edit.UI.Playfield
             {
                 switch (Map.Mode)
                 {
+                    case GameMode.Keys1:
+                        return 74;
+                    case GameMode.Keys2:
+                        return 74;
+                    case GameMode.Keys3:
+                        return 74;
                     case GameMode.Keys4:
                         return 74;
+                    case GameMode.Keys5:
+                        return 70;
+                    case GameMode.Keys6:
+                        return 70;
                     case GameMode.Keys7:
                         return 70;
+                    case GameMode.Keys9:
+                        return 50;
+                    case GameMode.Keys10:
+                        return 50;
                     default:
                         throw new ArgumentOutOfRangeException();
                 }

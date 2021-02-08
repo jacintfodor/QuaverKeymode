@@ -631,8 +631,15 @@ namespace Quaver.Shared.Screens.Gameplay
         {
             switch (Map.Mode)
             {
+                case GameMode.Keys1:
+                case GameMode.Keys2:
+                case GameMode.Keys3:
                 case GameMode.Keys4:
+                case GameMode.Keys5:
+                case GameMode.Keys6:
                 case GameMode.Keys7:
+                case GameMode.Keys9:
+                case GameMode.Keys10:
                     Ruleset = new GameplayRulesetKeys(this, Map);
                     break;
                 default:

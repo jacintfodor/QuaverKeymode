@@ -436,6 +436,8 @@ namespace Quaver.Shared.Screens.Selection.UI.Mapsets
                     case GameMode.Keys7:
                         has7K = true;
                         break;
+                    default:
+                        break;
                 }
             }
 

@@ -416,6 +416,8 @@ namespace Quaver.Shared.Screens.Selection.UI.Playlists
                     case GameMode.Keys7:
                         has7K = true;
                         break;
+                    default:
+                        break;
                 }
             }
 

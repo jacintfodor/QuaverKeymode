@@ -232,11 +232,32 @@ namespace Quaver.Shared.Screens.Gameplay.Rulesets.Keys.Playfield
             ScrollDirection direction;
             switch (Ruleset.Map.Mode)
             {
+                case GameMode.Keys1:
+                    direction = ConfigManager.ScrollDirection1K.Value;
+                    break;
+                case GameMode.Keys2:
+                    direction = ConfigManager.ScrollDirection2K.Value;
+                    break;
+                case GameMode.Keys3:
+                    direction = ConfigManager.ScrollDirection3K.Value;
+                    break;
                 case GameMode.Keys4:
                     direction = ConfigManager.ScrollDirection4K.Value;
                     break;
+                case GameMode.Keys5:
+                    direction = ConfigManager.ScrollDirection5K.Value;
+                    break;
+                case GameMode.Keys6:
+                    direction = ConfigManager.ScrollDirection6K.Value;
+                    break;
                 case GameMode.Keys7:
                     direction = ConfigManager.ScrollDirection7K.Value;
+                    break;
+                case GameMode.Keys9:
+                    direction = ConfigManager.ScrollDirection9K.Value;
+                    break;
+                case GameMode.Keys10:
+                    direction = ConfigManager.ScrollDirection10K.Value;
                     break;
                 default:
                     throw new Exception("Map Mode does not exist.");

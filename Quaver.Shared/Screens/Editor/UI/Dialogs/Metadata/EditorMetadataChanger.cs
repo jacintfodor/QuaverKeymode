@@ -197,11 +197,32 @@ namespace Quaver.Shared.Screens.Editor.UI.Dialogs.Metadata
             {
                 switch (s)
                 {
+                    case "1 Keys":
+                        Dialog.Screen.WorkingMap.Mode = GameMode.Keys1;
+                        break;
+                    case "2 Keys":
+                        Dialog.Screen.WorkingMap.Mode = GameMode.Keys2;
+                        break;
+                    case "3 Keys":
+                        Dialog.Screen.WorkingMap.Mode = GameMode.Keys3;
+                        break;
                     case "4 Keys":
                         Dialog.Screen.WorkingMap.Mode = GameMode.Keys4;
                         break;
+                    case "5 Keys":
+                        Dialog.Screen.WorkingMap.Mode = GameMode.Keys5;
+                        break;
+                    case "6 Keys":
+                        Dialog.Screen.WorkingMap.Mode = GameMode.Keys6;
+                        break;
                     case "7 Keys":
                         Dialog.Screen.WorkingMap.Mode = GameMode.Keys7;
+                        break;
+                    case "9 Keys":
+                        Dialog.Screen.WorkingMap.Mode = GameMode.Keys9;
+                        break;
+                    case "10 Keys":
+                        Dialog.Screen.WorkingMap.Mode = GameMode.Keys10;
                         break;
                     default:
                         throw new InvalidOperationException();

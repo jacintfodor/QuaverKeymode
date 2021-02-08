@@ -356,11 +356,32 @@ namespace Quaver.Shared.Screens.Gameplay.Rulesets.Input
 
             switch (Ruleset.Screen.Map.Mode)
             {
+                case GameMode.Keys1:
+                    scrollSpeed = ConfigManager.ScrollSpeed1K;
+                    break;
+                case GameMode.Keys2:
+                    scrollSpeed = ConfigManager.ScrollSpeed2K;
+                    break;
+                case GameMode.Keys3:
+                    scrollSpeed = ConfigManager.ScrollSpeed3K;
+                    break;
                 case GameMode.Keys4:
                     scrollSpeed = ConfigManager.ScrollSpeed4K;
                     break;
+                case GameMode.Keys5:
+                    scrollSpeed = ConfigManager.ScrollSpeed5K;
+                    break;
+                case GameMode.Keys6:
+                    scrollSpeed = ConfigManager.ScrollSpeed6K;
+                    break;
                 case GameMode.Keys7:
                     scrollSpeed = ConfigManager.ScrollSpeed7K;
+                    break;
+                case GameMode.Keys9:
+                    scrollSpeed = ConfigManager.ScrollSpeed9K;
+                    break;
+                case GameMode.Keys10:
+                    scrollSpeed = ConfigManager.ScrollSpeed10K;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -398,29 +419,62 @@ namespace Quaver.Shared.Screens.Gameplay.Rulesets.Input
         {
             switch (mode)
             {
+                case GameMode.Keys1:
+                    // Initialize 1K Input button container.
+                    BindingStore = new List<InputBindingKeys>
+                        {
+                            new InputBindingKeys(ConfigManager.KeyMania1K1)
+                        };
+                    break;
+                case GameMode.Keys2:
+                    // Initialize 2K Input button container.
+                    BindingStore = new List<InputBindingKeys>
+                        {
+                            new InputBindingKeys(ConfigManager.KeyMania2K1),
+                            new InputBindingKeys(ConfigManager.KeyMania2K2)
+                        };
+                    break;
+                case GameMode.Keys3:
+                    // Initialize 3K Input button container.
+                    BindingStore = new List<InputBindingKeys>
+                        {
+                            new InputBindingKeys(ConfigManager.KeyMania3K1),
+                            new InputBindingKeys(ConfigManager.KeyMania3K2),
+                            new InputBindingKeys(ConfigManager.KeyMania3K3)
+                        };
+                    break;
                 case GameMode.Keys4:
                     // Initialize 4K Input button container.
-                    if (!Ruleset.Screen.Map.HasScratchKey)
-                    {
-                        BindingStore = new List<InputBindingKeys>
+                    BindingStore = new List<InputBindingKeys>
                         {
                             new InputBindingKeys(ConfigManager.KeyMania4K1),
                             new InputBindingKeys(ConfigManager.KeyMania4K2),
                             new InputBindingKeys(ConfigManager.KeyMania4K3),
                             new InputBindingKeys(ConfigManager.KeyMania4K4)
                         };
-                    }
-                    else
-                    {
-                        BindingStore = new List<InputBindingKeys>
+                    break;
+                case GameMode.Keys5:
+                    // Initialize 5K Input button container.
+                    BindingStore = new List<InputBindingKeys>
                         {
-                            new InputBindingKeys(ConfigManager.KeyLayout4KScratch1),
-                            new InputBindingKeys(ConfigManager.KeyLayout4KScratch2),
-                            new InputBindingKeys(ConfigManager.KeyLayout4KScratch3),
-                            new InputBindingKeys(ConfigManager.KeyLayout4KScratch4),
-                            new InputBindingKeys(ConfigManager.KeyLayout4KScratch5),
+                            new InputBindingKeys(ConfigManager.KeyMania5K1),
+                            new InputBindingKeys(ConfigManager.KeyMania5K2),
+                            new InputBindingKeys(ConfigManager.KeyMania5K3),
+                            new InputBindingKeys(ConfigManager.KeyMania5K4),
+                            new InputBindingKeys(ConfigManager.KeyMania5K5)
                         };
-                    }
+                    break;
+                case GameMode.Keys6:
+                    // Initialize 6K Input button container.
+                    BindingStore = new List<InputBindingKeys>
+                        {
+                            new InputBindingKeys(ConfigManager.KeyMania6K1),
+                            new InputBindingKeys(ConfigManager.KeyMania6K2),
+                            new InputBindingKeys(ConfigManager.KeyMania6K3),
+                            new InputBindingKeys(ConfigManager.KeyMania6K4),
+                            new InputBindingKeys(ConfigManager.KeyMania6K5),
+                            new InputBindingKeys(ConfigManager.KeyMania6K6)
+                        };
                     break;
                 case GameMode.Keys7:
                     if (!Ruleset.Screen.Map.HasScratchKey)
@@ -451,6 +505,37 @@ namespace Quaver.Shared.Screens.Gameplay.Rulesets.Input
                             new InputBindingKeys(ConfigManager.KeyLayout7KScratch9)
                         };
                     }
+                    break;
+                case GameMode.Keys9:
+                    // Initialize 9K Input button container.
+                    BindingStore = new List<InputBindingKeys>
+                        {
+                            new InputBindingKeys(ConfigManager.KeyMania9K1),
+                            new InputBindingKeys(ConfigManager.KeyMania9K2),
+                            new InputBindingKeys(ConfigManager.KeyMania9K3),
+                            new InputBindingKeys(ConfigManager.KeyMania9K4),
+                            new InputBindingKeys(ConfigManager.KeyMania9K5),
+                            new InputBindingKeys(ConfigManager.KeyMania9K6),
+                            new InputBindingKeys(ConfigManager.KeyMania9K7),
+                            new InputBindingKeys(ConfigManager.KeyMania9K8),
+                            new InputBindingKeys(ConfigManager.KeyMania9K9)
+                        };
+                    break;
+                case GameMode.Keys10:
+                    // Initialize 10K Input button container.
+                    BindingStore = new List<InputBindingKeys>
+                        {
+                            new InputBindingKeys(ConfigManager.KeyMania10K1),
+                            new InputBindingKeys(ConfigManager.KeyMania10K2),
+                            new InputBindingKeys(ConfigManager.KeyMania10K3),
+                            new InputBindingKeys(ConfigManager.KeyMania10K4),
+                            new InputBindingKeys(ConfigManager.KeyMania10K5),
+                            new InputBindingKeys(ConfigManager.KeyMania10K6),
+                            new InputBindingKeys(ConfigManager.KeyMania10K7),
+                            new InputBindingKeys(ConfigManager.KeyMania10K8),
+                            new InputBindingKeys(ConfigManager.KeyMania10K9),
+                            new InputBindingKeys(ConfigManager.KeyMania10K10)
+                        };
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);

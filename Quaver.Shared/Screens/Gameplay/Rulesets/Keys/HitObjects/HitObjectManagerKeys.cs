@@ -51,7 +51,36 @@ namespace Quaver.Shared.Screens.Gameplay.Rulesets.Keys.HitObjects
                 var speed = ConfigManager.ScrollSpeed4K;
 
                 if (MapManager.Selected.Value.Qua != null)
-                    speed = MapManager.Selected.Value.Qua.Mode == GameMode.Keys4 ? ConfigManager.ScrollSpeed4K : ConfigManager.ScrollSpeed7K;
+                    switch (MapManager.Selected.Value.Qua.Mode)
+                    {
+                        case GameMode.Keys1:
+                            speed = ConfigManager.ScrollSpeed1K;
+                            break;
+                        case GameMode.Keys2:
+                            speed = ConfigManager.ScrollSpeed2K;
+                            break;
+                        case GameMode.Keys3:
+                            speed = ConfigManager.ScrollSpeed3K;
+                            break;
+                        case GameMode.Keys4:
+                            speed = ConfigManager.ScrollSpeed4K;
+                            break;
+                        case GameMode.Keys5:
+                            speed = ConfigManager.ScrollSpeed5K;
+                            break;
+                        case GameMode.Keys6:
+                            speed = ConfigManager.ScrollSpeed6K;
+                            break;
+                        case GameMode.Keys7:
+                            speed = ConfigManager.ScrollSpeed7K;
+                            break;
+                        case GameMode.Keys9:
+                            speed = ConfigManager.ScrollSpeed9K;
+                            break;
+                        case GameMode.Keys10:
+                            speed = ConfigManager.ScrollSpeed10K;
+                            break;
+                    }
 
                 var scalingFactor = QuaverGame.SkinScalingFactor;
 

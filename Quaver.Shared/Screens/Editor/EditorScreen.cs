@@ -401,8 +401,15 @@ namespace Quaver.Shared.Screens.Editor
         {
             switch (WorkingMap.Mode)
             {
+                case GameMode.Keys1:
+                case GameMode.Keys2:
+                case GameMode.Keys3:
                 case GameMode.Keys4:
+                case GameMode.Keys5:
+                case GameMode.Keys6:
                 case GameMode.Keys7:
+                case GameMode.Keys9:
+                case GameMode.Keys10:
                     Ruleset = new EditorRulesetKeys(this);
                     break;
                 default:

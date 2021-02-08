@@ -647,7 +647,7 @@ namespace Quaver.Shared.Skinning
         /// </summary>
         private void LoadLaneSpecificElements()
         {
-            for (var i = 0; i < 8; i++)
+            for (var i = 0; i < 10; i++)
             {
                 if (i == 5 && Mode == GameMode.Keys4)
                     break;
