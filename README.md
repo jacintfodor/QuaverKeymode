@@ -14,7 +14,7 @@ This project is not likely to receive any update, use the official client for th
 
 ## Features
 
-All of Quaver's feature + the support of 1k to 10k
+All of Quaver's feature aside from online stuff. + the support of 1k to 10k
 
 ## Building & Running
 
