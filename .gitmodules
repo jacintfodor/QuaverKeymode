@@ -1,9 +1,9 @@
 [submodule "Quaver.API"]
 	path = Quaver.API
-	url = https://github.com/Kizuna-dev/Quaver.API/tree/other-keymode-support
+	url = https://github.com/Kizuna-dev/Quaver.API
 [submodule "Quaver.Resources"]
 	path = Quaver.Resources
-	url = https://github.com/Kizuna-dev/Quaver.Resources/tree/other-keymode-images
+	url = https://github.com/Kizuna-dev/Quaver.Resources
 [submodule "Wobble"]
 	path = Wobble
 	url = https://github.com/Quaver/Wobble
