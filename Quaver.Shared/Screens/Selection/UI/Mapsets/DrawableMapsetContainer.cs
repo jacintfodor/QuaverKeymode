@@ -423,28 +423,80 @@ namespace Quaver.Shared.Screens.Selection.UI.Mapsets
         /// <returns></returns>
         private Texture2D GetGameModeImage()
         {
+            var has1k = false;
+            var has2k = false;
+            var has3k = false;
             var has4k = false;
+            var has5k = false;
+            var has6k = false;
             var has7K = false;
+            var has8k = false;
+            var has9k = false;
+            var has10k = false;
 
             foreach (var map in ParentMapset.Item.Maps)
             {
                 switch (map.Mode)
                 {
+                    case GameMode.Keys1:
+                        has1k = true;
+                        break;
+                    case GameMode.Keys2:
+                        has2k = true;
+                        break;
+                    case GameMode.Keys3:
+                        has3k = true;
+                        break;
                     case GameMode.Keys4:
                         has4k = true;
                         break;
+                    case GameMode.Keys5:
+                        has5k = true;
+                        break;
+                    case GameMode.Keys6:
+                        has6k = true;
+                        break;
                     case GameMode.Keys7:
-                        has7K = true;
+                        if (map.HasScratchKey)
+                        {
+                            has8k = true;
+                        }
+                        else
+                        {
+                            has7K = true;
+                        }
+                        break;
+                    case GameMode.Keys9:
+                        has9k = true;
+                        break;
+                    case GameMode.Keys10:
+                        has10k = true;
                         break;
                     default:
                         break;
                 }
             }
 
-            if (has4k && !has7K)
+            if (has1k && !has2k && !has3k && !has4k && !has5k && !has6k && !has7K && !has8k && !has9k && !has10k)
+                return SkinManager.Skin?.SongSelect?.GameMode1K ?? UserInterface.Keys1Panel;
+            if (!has1k && has2k && !has3k && !has4k && !has5k && !has6k && !has7K && !has8k && !has9k && !has10k)
+                return SkinManager.Skin?.SongSelect?.GameMode2K ?? UserInterface.Keys2Panel;
+            if (!has1k && !has2k && has3k && !has4k && !has5k && !has6k && !has7K && !has8k && !has9k && !has10k)
+                return SkinManager.Skin?.SongSelect?.GameMode3K ?? UserInterface.Keys3Panel;
+            if (!has1k && !has2k && !has3k && has4k && !has5k && !has6k && !has7K && !has8k && !has9k && !has10k)
                 return SkinManager.Skin?.SongSelect?.GameMode4K ?? UserInterface.Keys4Panel;
-            if (has7K && !has4k)
+            if (!has1k && !has2k && !has3k && !has4k && has5k && !has6k && !has7K && !has8k && !has9k && !has10k)
+                return SkinManager.Skin?.SongSelect?.GameMode5K ?? UserInterface.Keys5Panel;
+            if (!has1k && !has2k && !has3k && !has4k && !has5k && has6k && !has7K && !has8k && !has9k && !has10k)
+                return SkinManager.Skin?.SongSelect?.GameMode6K ?? UserInterface.Keys6Panel;
+            if (!has1k && !has2k && !has3k && !has4k && !has5k && !has6k && has7K && !has8k && !has9k && !has10k)
                 return SkinManager.Skin?.SongSelect?.GameMode7K ?? UserInterface.Keys7Panel;
+            if (!has1k && !has2k && !has3k && !has4k && !has5k && !has6k && !has7K && has8k && !has9k && !has10k)
+                return SkinManager.Skin?.SongSelect?.GameMode8K ?? UserInterface.Keys8Panel;
+            if (!has1k && !has2k && !has3k && !has4k && !has5k && !has6k && !has7K && !has8k && has9k && !has10k)
+                return SkinManager.Skin?.SongSelect?.GameMode9K ?? UserInterface.Keys9Panel;
+            if (!has1k && !has2k && !has3k && !has4k && !has5k && !has6k && !has7K && !has8k && !has9k && has10k)
+                return SkinManager.Skin?.SongSelect?.GameMode10K ?? UserInterface.Keys10Panel;
 
             return SkinManager.Skin?.SongSelect?.GameMode4K7K ?? UserInterface.BothModesPanel;
         }

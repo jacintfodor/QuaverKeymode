@@ -92,8 +92,16 @@ namespace Quaver.Shared.Assets
         public static Texture2D DropdownOpen => TextureManager.Load("Quaver.Resources/Textures/UI/Elements/dropdown-open.png");
         public static Texture2D DropdownBottom => TextureManager.Load("Quaver.Resources/Textures/UI/Elements/dropdown-bottom.png");
         public static Texture2D SearchBox => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/search-box.png");
+        public static Texture2D Keys1Panel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/keys1.png");
+        public static Texture2D Keys2Panel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/keys2.png");
+        public static Texture2D Keys3Panel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/keys3.png");
         public static Texture2D Keys4Panel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/keys4.png");
+        public static Texture2D Keys5Panel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/keys5.png");
+        public static Texture2D Keys6Panel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/keys6.png");
         public static Texture2D Keys7Panel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/keys7.png");
+        public static Texture2D Keys8Panel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/keys8.png");
+        public static Texture2D Keys9Panel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/keys9.png");
+        public static Texture2D Keys10Panel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/keys10.png");
         public static Texture2D KeysNonePanel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/keys-none.png");
         public static Texture2D BothModesPanel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/both-modes-panel.png");
         public static Texture2D ModePanel => TextureManager.Load("Quaver.Resources/Textures/UI/SongSelect/mode-panel.png");

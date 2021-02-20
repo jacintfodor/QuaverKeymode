@@ -1,4 +1,4 @@
-﻿using IniFileParser.Model;
+using IniFileParser.Model;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Quaver.Shared.Config;
@@ -60,14 +60,20 @@ namespace Quaver.Shared.Skinning.Menus
 
         public Texture2D MapsetHovered { get; private set; }
 
-#endregion
+        #endregion
 
-#region GAME_MODE
+        #region GAME_MODE
 
+        public Texture2D GameMode1K { get; private set; }
+        public Texture2D GameMode2K { get; private set; }
+        public Texture2D GameMode3K { get; private set; }
         public Texture2D GameMode4K { get; private set; }
-
+        public Texture2D GameMode5K { get; private set; }
+        public Texture2D GameMode6K { get; private set; }
         public Texture2D GameMode7K { get; private set; }
-
+        public Texture2D GameMode8K { get; private set; }
+        public Texture2D GameMode9K { get; private set; }
+        public Texture2D GameMode10K { get; private set; }
         public Texture2D GameMode4K7K { get; private set; }
 
 #endregion
