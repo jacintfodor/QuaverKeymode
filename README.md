@@ -10,7 +10,7 @@ This is an offline build (doesn't require steam) which support multiple keymode,
 
 ## Status
 
-This project is not likely to receive any update, use the official client for that.
+In case you experience some bugs feel free to open an issue.
 
 ## Features
 
