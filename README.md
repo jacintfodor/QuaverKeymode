@@ -21,7 +21,7 @@ All of Quaver's feature aside from online stuff. + the support of 1k to 10k
 Getting started with **Quaver** development is extremely easy.
 
 * Install the [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-* Clone the Quaver repository and its submodules `git clone --single-branch --branch Other-keymode-support --recurse-submodules https://github.com/Kizuna-dev/Quaver`
+* Clone the Quaver repository and its submodules `git clone --single-branch --branch Other-keymode-support --recurse-submodules https://github.com/jacintfodor/QuaverKeymode`
 * Build & run Quaver with `dotnet run --project Quaver`
 
 ## Contributing 
