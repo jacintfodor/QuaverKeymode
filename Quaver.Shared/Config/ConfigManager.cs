@@ -999,8 +999,8 @@ namespace Quaver.Shared.Config
             KeyMania5K5 = ReadValue(@"KeyMania5K5", Keys.L, data);
             KeyMania6K1 = ReadValue(@"KeyMania6K1", Keys.A, data);
             KeyMania6K2 = ReadValue(@"KeyMania6K2", Keys.S, data);
-            KeyMania6K3 = ReadValue(@"KeyMania6K4", Keys.D, data);
-            KeyMania6K4 = ReadValue(@"KeyMania6K5", Keys.J, data);
+            KeyMania6K3 = ReadValue(@"KeyMania6K3", Keys.D, data);
+            KeyMania6K4 = ReadValue(@"KeyMania6K4", Keys.J, data);
             KeyMania6K5 = ReadValue(@"KeyMania6K5", Keys.K, data);
             KeyMania6K6 = ReadValue(@"KeyMania6K6", Keys.L, data);
             KeyMania7K1 = ReadValue(@"KeyMania7K1", Keys.A, data);
